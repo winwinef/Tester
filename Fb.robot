@@ -1,5 +1,6 @@
 *** Settings ***
 Documentation    Suite description
+Library     SeleniumLibrary
 Resource    ./login.resource
 Suite Setup     Open Website
 Suite Teardown  Close Browsers
@@ -11,7 +12,7 @@ Test Login FB1
     type username       winly2212@gmail.com
     type password       12345678
     click button login
-    wait
+    sleep   5s
 
 *** Test Cases ***
 Test Login FB2
@@ -19,7 +20,7 @@ Test Login FB2
     type username         ${EMPTY}
     type password     ${EMPTY}
     click button login
-
+    sleep   5s
 
 *** Test Cases ***
 Test Login FB3
@@ -27,6 +28,7 @@ Test Login FB3
     type username      winly2212@gmail.com
     type password      ${EMPTY}
     click button login
+    sleep   5s
 
 *** Test Cases ***
 Test Login FB4
@@ -34,6 +36,7 @@ Test Login FB4
     type username     ${EMPTY}
     type password    211220
     click button login
+    sleep   5s
 
 
 *** Test Cases ***
@@ -42,11 +45,13 @@ Test Login FB5
     type username     thang21122000@gmail.com
     type password       12345678
     click button login
-
+    sleep   5s
 *** Test Cases ***
 Test Login FB6
     [Tags]    Login succesfull
     type username   winly2212@gmail.com
     type password   21122000
     click button login
+    sleep   5s
+
 *** Keywords ***
